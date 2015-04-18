@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js" type="text/javascript"></script>
+    <script src="popup.js"  type="text/javascript"></script>
+    <script type="text/javascript">
+        window.onload=function() {
+            $('#show').on('click', function () {
+                $('#popup').bPopup({
+                    modalClose: false,
+                    opacity: 0.6,
+                    positionStyle: 'fixed' //'fixed' or 'absolute'
+                });
+            });
+
+        }
+    </script>
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+    <button id="show">Show popup</button><br>
+    <div id="popup">
+      <span class="button b-close">X</span>
+      <div class="imageholder"><img src="bookshelf.jpg"/></div>
+    </div>
+</body>
+</html>
